@@ -3,8 +3,8 @@
 #include <time.h>
 #include <math.h>
 
-extern float dot_product_c(float *vec1, float *vec2, int n);
-extern void vec_product_asm(float *vec1, float *vec2, float *result, int n);
+extern float dot_product_c(float *vec1, float *vec2, size_t n);
+extern void vec_product_asm(float *vec1, float *vec2, float *result, size_t n);
 
 float get_time_elapsed(clock_t start)
 {
@@ -12,27 +12,29 @@ float get_time_elapsed(clock_t start)
     return ((float)(end - start)) / (float)CLOCKS_PER_SEC;
 }
 
-int main (){
-	int n;
+int log2_int(unsigned int x) {
+    int result = 0;
+    while (x >>= 1) {
+        result++;
+    }
+    return result;
+}
+
+int process (int vec_size){
+	int n = vec_size;
+	int exponent = log2_int(n);
 	
-	// Initialize random seed
-	srand(time(NULL));
-	
-	printf("Enter Vector Length:");
-	scanf("%d", &n);
-	
+	// printf("Enter Vector Length:");
+	// scanf("%d", &n);
 
 	float *vec1 = (float*)malloc(n * sizeof(float));
 	float *vec2 = (float*)malloc(n * sizeof(float));
 	float result_c = 0.0;
 	float result_asm = 0.0;
-
-	
 	
 	// Generate random values for Vector 1
     for (int i = 0; i < n; i++) {
         vec1[i] = ((float)rand() / RAND_MAX) * 200.0f - 100.0f; // Random between -100.0 and 100.0
-
     }
     
 	// Generate random values for Vector 2
@@ -42,7 +44,7 @@ int main (){
 	
 	// Start timing C implementation
 	float total_time_c = 0.0f;
-	printf("Starting dot product calculation (C) x20...\n");
+	printf("Starting dot product calculation (C) x20 for vector size 2^%d...\n", exponent);
 	for (int t = 0; t < 20; t++) {
 		clock_t start = clock();
 		result_c = dot_product_c(vec1, vec2, n);
@@ -64,7 +66,7 @@ int main (){
 
 	// Start timing C implementation
 	float total_time_asm = 0.0f;
-	printf("Starting dot product calculation (Assembly)...\n");
+	printf("Starting dot product calculation (Assembly) for vector size 2^%d...\n", exponent);
 	for (int t = 0; t < 20; t++) {
 		clock_t start = clock();
 		vec_product_asm(vec1, vec2, &result_asm, n);
@@ -85,6 +87,15 @@ int main (){
 	printf("\n=== RESULTS ===\n");
 	printf("C Result:        %f\n", result_c);
 	printf("Assembly Result: %f\n", result_asm);
+
+	// Correctness Validation
+	float diff = fabs(result_c - result_asm);
+
+	if (diff > 0.001f) {
+		printf("WARNING: Results mismatch! Difference = %f\n", diff);
+	} else {
+		printf("Correctness Validation: Results match. Difference = %f\n", diff);
+	}
 	
 	printf("\n=== PERFORMANCE ===\n");
 	// printf("C Time:          %f seconds (%.3f microseconds)\n", execution_time_c, execution_time_c * 1000000);
@@ -96,11 +107,30 @@ int main (){
 	// Free allocated memory
 	free(vec1);
 	free(vec2);
-
-	system("pause");
-	
 	
 return 0;
+}
+
+int main(){
+	int exponents[] = {20, 24, 30};
+	int count = sizeof(exponents) / sizeof(exponents[0]);
+
+	// Initialize random seed
+	srand(time(NULL));
+
+	for (int i = 0; i < count; ++i) {
+		// int vec_size = (int)(1u << exponents[i]);
+		unsigned long long vec_size = (1ULL << exponents[i]);
+		printf("\n--- Running process for vector size 2^%d (n=%d) ---\n", exponents[i], vec_size);
+		int rc = process(vec_size);
+		if (rc != 0) {
+			printf("process returned %d for vector size 2^%d; continuing.\n", rc, exponents[i]);
+		}
+	}
+
+	system("pause");
+    
+	return 0;
 }
 
 
