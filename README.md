@@ -207,4 +207,7 @@ The C version is treated as the reference for correctness checking.
 
 ## V. Demonstration Video
 
-- Assembly + C and Main Demo [https://youtu.be/fnofO-52lmI]
+- C, Assembly, and Main Source Code + Execution [https://youtu.be/fnofO-52lmI]
+
+https://github.com/user-attachments/assets/40552390-7417-49d1-ab84-b301da0d44c2
+
