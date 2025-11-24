@@ -25,7 +25,7 @@ The kernels are tested with vector sizes \(n = 2^{20}, 2^{24}, 2^{30}\) (reduced
   - Or click the **green triangle** icon *(Start Without Debugging)*
 
 #### Open Solution
-1. Double click the .slnx file in "...\DotProductSIMD\DotProductSIMD.slnx"
+1. Double click the .slnx file in `...\DotProductSIMD\DotProductSIMD.slnx`
 2. On the top toolbar, set the following:
   - **Solution Configuration:** `Debug` or `Release`
   - **Solution Platform:** `x64`
@@ -36,7 +36,7 @@ The kernels are tested with vector sizes \(n = 2^{20}, 2^{24}, 2^{30}\) (reduced
 ***Alternate Option***
 
 *(for seeing running program only in case opening/running in Visual Studio doesn't work properly, source files are still in the folder for viewing/inspecting)*
-- Open x64 folder "...\LBYARCH-MP2\DotProductSIMD\x64"
+- Open x64 folder `...\LBYARCH-MP2\DotProductSIMD\x64`
 - Choose between Debug or Release folders
 - run DotProductSIMD.exe
 
