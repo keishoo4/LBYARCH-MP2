@@ -1,7 +1,0 @@
-<Solution>
-  <Configurations>
-    <Platform Name="x64" />
-    <Platform Name="x86" />
-  </Configurations>
-  <Project Path="DotProductSIMD/DotProductSIMD.vcxproj" Id="79c851f1-3877-43db-b7f6-1c18f6c7ce28" />
-</Solution>
