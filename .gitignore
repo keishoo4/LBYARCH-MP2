@@ -1,0 +1,41 @@
+# Ignore Visual Studio temporary files, build results, and user-specific files
+
+# Visual Studio specific
+.vs/
+*.vcxproj.user
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build folders
+x64/Debug/
+x64/Release/
+
+# Visual Studio Code settings (if using)
+.vscode/
+
+# Backup files
+*~
+*.tmp
+*.log
+*.obj
+*.pdb
+*.idb
+*.ilk
+*.iobj
+
+# Ignore executable files
+*.exe
+*.dll
+*.lib
+
+# Ignore compiled object files from MASM
+*.obj
+
+# Ignore generated dependency files
+*.d
+
+# Ignore coverage results
+*.gcda
+*.gcno
