@@ -10,6 +10,17 @@ This project implements a dot product kernel in both:
 
 The kernels are tested with vector sizes \(n = 2^{20}, 2^{24}, 2^{30}\) (reduced if needed for memory limits). Each kernel is run **20 times** to calculate the **average execution time**. Correctness of the assembly kernel is verified against the C kernel.
 
+### To Build and Run:
+
+1. Open DotProductSIMD folder
+2. Open DotProductSIMD.slnx in Visual Studio
+3. Start without debugging (Ctrl + F5)
+
+***Alternate Option***
+
+
+---
+
 ## Program Design
 
 ### 1. Objective
@@ -196,4 +207,4 @@ The C version is treated as the reference for correctness checking.
 
 ## V. Demonstration Video
 
-- Assembly + C and Main Demo [Video Link Here]
+- Assembly + C and Main Demo [https://youtu.be/fnofO-52lmI]
