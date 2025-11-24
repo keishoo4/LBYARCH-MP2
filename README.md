@@ -196,4 +196,4 @@ The C version is treated as the reference for correctness checking.
 
 ## V. Demonstration Video
 
-- Assembly and Main Demo [Video Link Here]
+- Assembly + C and Main Demo [Video Link Here]
