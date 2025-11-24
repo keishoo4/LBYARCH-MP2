@@ -12,7 +12,8 @@ The kernels are tested with vector sizes \(n = 2^{20}, 2^{24}, 2^{30}\) (reduced
 
 ### To Build and Run:
 
-1. Open Visual Studio
+#### Folder Mode
+1. Open Visual Studio *(Both members used Visual Studio 2026)*
 2. Click File → Open → Folder
 3. Select the DotProductSIMD folder
 4. On the top toolbar, set the following:
@@ -20,10 +21,19 @@ The kernels are tested with vector sizes \(n = 2^{20}, 2^{24}, 2^{30}\) (reduced
   - **Configuration:** `Debug` or `Release`
   - **Platform:** `x64`
 5. Then choose one of the following:
-  - press: `Ctrl + F5` *(build and run without debugging)*
+  - Press: `Ctrl + F5` *(build and run without debugging)*
   - Or click the **green triangle** icon *(Start Without Debugging)*
 
-***Alternate Option (for seeing running program, source files are still in folder)***
+#### Open Solution
+1. Double click the .slnx file in "...\DotProductSIMD\DotProductSIMD.slnx"
+2. On the top toolbar, set the following:
+  - **Solution Configuration:** `Debug` or `Release`
+  - **Solution Platform:** `x64`
+3. Then choose one of the following:
+  - Press: `Ctrl + F5` *(build and run without debugging)*
+  - Or click the **green triangle** icon *(Start Without Debugging)*
+
+***Alternate Option (for seeing running program only in case opening/running in Visual Studio doesn't work properly, source files are still in the folder for viewing/inspecting)***
 - Open x64 folder "...\LBYARCH-MP2\DotProductSIMD\x64"
 - Choose between Debug or Release folders
 - run DotProductSIMD.exe
