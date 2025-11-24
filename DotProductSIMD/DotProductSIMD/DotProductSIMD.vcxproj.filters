@@ -15,15 +15,15 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\OneDrive\Documents\DLSU\LBYARCH\LBYARCH-MP2\dot_product_c.c">
+    <ClCompile Include="dot_product_c.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\OneDrive\Documents\DLSU\LBYARCH\LBYARCH-MP2\main.c">
+    <ClCompile Include="main.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <MASM Include="..\..\..\..\OneDrive\Documents\DLSU\LBYARCH\LBYARCH-MP2\vec_product_asm.asm">
+    <MASM Include="vec_product_asm.asm">
       <Filter>Source Files</Filter>
     </MASM>
   </ItemGroup>

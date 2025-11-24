@@ -128,17 +128,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\OneDrive\Documents\DLSU\LBYARCH\LBYARCH-MP2\dot_product_c.c" />
-    <ClCompile Include="..\..\..\..\OneDrive\Documents\DLSU\LBYARCH\LBYARCH-MP2\main.c" />
+    <ClCompile Include="dot_product_c.c" />
+    <ClCompile Include="main.c" />
   </ItemGroup>
   <ItemGroup>
-    <MASM Include="..\..\..\..\OneDrive\Documents\DLSU\LBYARCH\LBYARCH-MP2\vec_product_asm.asm">
-      <FileType>Document</FileType>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
-    </MASM>
+    <MASM Include="vec_product_asm.asm" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
