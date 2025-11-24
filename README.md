@@ -33,7 +33,8 @@ The kernels are tested with vector sizes \(n = 2^{20}, 2^{24}, 2^{30}\) (reduced
   - Press: `Ctrl + F5` *(build and run without debugging)*
   - Or click the **green triangle** icon *(Start Without Debugging)*
 
-***Alternate Option (for seeing running program only in case opening/running in Visual Studio doesn't work properly, source files are still in the folder for viewing/inspecting)***
+***Alternate Option***
+*(for seeing running program only in case opening/running in Visual Studio doesn't work properly, source files are still in the folder for viewing/inspecting)*
 - Open x64 folder "...\LBYARCH-MP2\DotProductSIMD\x64"
 - Choose between Debug or Release folders
 - run DotProductSIMD.exe
