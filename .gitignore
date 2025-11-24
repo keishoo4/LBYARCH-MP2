@@ -9,9 +9,9 @@
 *.sln.docstates
 
 # Build folders
-x64
-x64/Debug/
-x64/Release/
+# x64
+# x64/Debug/
+# x64/Release/
 
 # Visual Studio Code settings (if using)
 .vscode/
@@ -26,10 +26,10 @@ x64/Release/
 *.ilk
 *.iobj
 
-# Ignore executable files
-*.exe
-*.dll
-*.lib
+# # Ignore executable files
+# *.exe
+# *.dll
+# *.lib
 
 # Ignore compiled object files from MASM
 *.obj
