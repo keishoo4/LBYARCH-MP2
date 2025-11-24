@@ -12,11 +12,15 @@ The kernels are tested with vector sizes \(n = 2^{20}, 2^{24}, 2^{30}\) (reduced
 
 ### To Build and Run:
 
-1. Open DotProductSIMD folder
-2. Open DotProductSIMD.slnx in Visual Studio
-3. Start without debugging (Ctrl + F5)
+1. Open Visual Studio
+2. Click File → Open → Folder
+3. Select the DotProductSIMD folder
+4. Once loaded, press: `Ctrl + F5`
 
-***Alternate Option***
+***Alternate Option (for seeing running program, source files are still in folder)***
+- Open x64 folder "...\LBYARCH-MP2\DotProductSIMD\x64"
+- Choose between Debug or Release folders
+- run DotProductSIMD.exe
 
 
 ---
