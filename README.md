@@ -21,9 +21,7 @@ The objective of this program is to implement a **dot product kernel** in two wa
 
 Both implementations compute the dot product:
 
-\[
-sdot = \sum_{i=0}^{n-1} A[i] \cdot B[i]
-\]
+sdot = A[0] * B[0] + A[1] * B[1] + ... + A[n-1] * B[n-1]
 
 where:
 - `A` and `B` are vectors of **single-precision floats**
@@ -108,9 +106,7 @@ After execution:
 - The output of the assembly kernel is compared with the result from the C kernel.
 - The absolute difference is computed using:
 
-\[
 difference = |sdot_C - sdot_ASM|
-\]
 
 Validation rule:
 - If difference ≤ 0.001 → **Correct**
