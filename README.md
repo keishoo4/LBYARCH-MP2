@@ -165,17 +165,17 @@ The C version is treated as the reference for correctness checking.
 
 | Vector Size | Avg. Time (Debug) | Avg. Time (Release) | Notes |
 |------------|-----------------|-------------------|------|
-| 2^20       | 0.00425 s         | 0.0012 s           | Correctness passed |
-| 2^24       | 0.0546 s          | 0.0186 s           | Correctness passed |
-| 2^30       | 3.50275 s         | 0.9532 s           | Correctness passed |
+| 2^20       | 0.003400 s         | 0.000950 s           | Correctness passed |
+| 2^24       | 0.054500 s         | 0.014850 s           | Correctness passed |
+| 2^30       | 3.491450 s         | 1.006050 s           | Correctness passed |
 
 ### B. x86-64 Assembly Kernel
 
 | Vector Size | Avg. Time (Debug) | Avg. Time (Release) | Notes |
 |------------|-----------------|-------------------|------|
-| 2^20       | 0.00125 s         | 0.00125 s          | Correctness passed |
-| 2^24       | 0.01495 s         | 0.0184 s           | Correctness passed |
-| 2^30       | 0.95735 s         | 0.9580 s           | Correctness passed |
+| 2^20       | 0.000950 s         | 0.000950 s           | Correctness passed |
+| 2^24       | 0.015100 s         | 0.014950 s           | Correctness passed |
+| 2^30       | 0.964900 s         | 0.968600 s           | Correctness passed |
 
 ### Performance Analysis
 - The Release configuration runs significantly faster than Debug due to compiler optimizations.

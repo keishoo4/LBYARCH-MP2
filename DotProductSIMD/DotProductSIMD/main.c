@@ -57,7 +57,7 @@ int process(unsigned long long vec_size){
 
 	// Start timing C implementation
 	float total_time_asm = 0.0f;
-	printf("Starting dot product calculation (Assembly) for vector size 2^%d...\n", exponent);
+	printf("Starting dot product calculation (Assembly) x20 for vector size 2^%d...\n", exponent);
 	for (int t = 0; t < 20; t++) {
 		clock_t start = clock();
 		vec_product_asm(vec1, vec2, &result_asm, (unsigned int)n);
@@ -80,9 +80,6 @@ int process(unsigned long long vec_size){
 	}
 	
 	printf("\n=== PERFORMANCE ===\n");
-	// printf("C Time:          %f seconds (%.3f microseconds)\n", execution_time_c, execution_time_c * 1000000);
-	// printf("Assembly Time:   %f seconds (%.3f microseconds)\n", execution_time_asm, execution_time_asm * 1000000);
-	
 	printf("C Time:          %f seconds\n", avg_time_c);
 	printf("Assembly Time:   %f seconds\n", avg_time_asm);
 
